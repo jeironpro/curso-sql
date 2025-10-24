@@ -1,0 +1,108 @@
+html {
+    font-family: "Outfit", Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: #ffe15d;
+    height: 80px;
+    width: 100%;
+}
+
+main {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+main .contenedor-crud {
+    display: grid;
+    grid-template-areas: 
+    "introduccion introduccion"
+    "create read"
+    "update delete"
+    "prueba-final prueba-final";
+    gap: 30px;
+}
+
+main .contenedor-crud .introduccion {
+    grid-area: introduccion;
+}
+
+main .contenedor-crud .create {
+    grid-area: create;
+}
+
+main .contenedor-crud .read {
+    grid-area: read;
+}
+
+main .contenedor-crud .update {
+    grid-area: update;
+}
+
+main .contenedor-crud .delete {
+    grid-area: delete;
+}
+
+main .contenedor-crud .prueba-final {
+    grid-area: prueba-final;
+}
+
+main .contenedor-crud .introduccion,
+main .contenedor-crud .prueba-final {
+    font-size: 20px;
+    font-weight: 600;
+    height: 50px;
+}
+
+main .contenedor-crud .crud {
+    align-items: center;
+    background-color: #eef1f3;
+    border-radius: 5px;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+main .contenedor-crud .crud .icon-crud {
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    width: 50%;
+}
+
+main .contenedor-crud .crud:hover,
+main .contenedor-crud .crud:hover .icon-crud {
+    transform: scale(1.1);
+}
+
+main .contenedor-crud .crud span {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+footer {
+    align-items: center;
+    background-color: #eef1f3;
+    display: flex;
+    font-size: 20px;
+    font-weight: 500;
+    justify-content: center;
+    height: 60px;
+    width: 100%;
+}
