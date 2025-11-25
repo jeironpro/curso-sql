@@ -41,3 +41,6 @@ function verificarRespuestas() {
         divResultado.textContent += ' Sigue estudiando, ¡tú puedes! 💪';
     }
 }
+
+const botonVerificar = document.getElementById('boton-verificar');
+botonVerificar.addEventListener('click', verificarRespuestas);

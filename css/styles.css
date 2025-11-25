@@ -22,8 +22,6 @@ body {
     line-height: 1.6;
 }
 
-/* ========== Clases Ordenadas Alfabéticamente ========== */
-
 .advertencia {
     background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
     border-left: 4px solid #f59e0b;
@@ -105,6 +103,7 @@ code {
     z-index: 100;
 }
 
+.boton-verificar,
 .enlace-volver {
     background-color: var(--secondary-color);
     border-radius: 50px;
@@ -117,6 +116,7 @@ code {
     transition: all 0.2s;
 }
 
+.boton-verificar:hover,
 .enlace-volver:hover {
     box-shadow: 0 4px 12px rgba(255, 225, 93, 0.4);
     transform: translateY(-2px);
@@ -335,9 +335,7 @@ pre code {
     padding-left: 15px;
 }
 
-/* ========== Diseño Responsive ========== */
-
-/* Tablet (768px - 1024px) */
+/* Diseño Responsive */
 @media (max-width: 1024px) {
     .principal {
         padding: 1.5rem;
@@ -361,7 +359,6 @@ pre code {
     }
 }
 
-/* Mobile Large (481px - 767px) */
 @media (max-width: 767px) {
     .encabezado {
         padding: 1rem;
@@ -464,7 +461,6 @@ pre code {
     }
 }
 
-/* Mobile Small (320px - 480px) */
 @media (max-width: 480px) {
     .hero h1 {
         font-size: 1.75rem;
@@ -517,6 +513,7 @@ pre code {
         font-size: 1.1rem;
     }
     
+    .boton-verificar,
     .enlace-volver {
         font-size: 0.9rem;
         padding: 10px 20px;
@@ -557,7 +554,6 @@ pre code {
     }
 }
 
-/* Extra Small Mobile (< 320px) */
 @media (max-width: 319px) {
     .hero h1 {
         font-size: 1.5rem;
@@ -572,7 +568,6 @@ pre code {
     }
 }
 
-/* Landscape Mobile Optimization */
 @media (max-height: 500px) and (orientation: landscape) {
     .hero {
         padding: 2rem 1.5rem;
@@ -589,7 +584,6 @@ pre code {
     }
 }
 
-/* Print Styles */
 @media print {
     .encabezado,
     .pie-pagina,
