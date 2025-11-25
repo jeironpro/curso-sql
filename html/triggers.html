@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icons/sql.png" type="image/x-icon">
+    <title>Triggers - Curso SQL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="logo">
+            <img src="../icons/sql.png" alt="SQL Logo">
+            <span>Curso SQL</span>
+        </div>
+    </header>
+
+    <main class="principal">
+        <section class="seccion-contenido">
+            <h1 class="section-title">Triggers (Disparadores)</h1>
+            
+            <h2>¿Qué es un Trigger?</h2>
+            <p>Un trigger es un conjunto de instrucciones SQL que se ejecutan automáticamente ("se disparan") en respuesta a ciertos eventos en una tabla en particular, como INSERT, UPDATE o DELETE.</p>
+            
+            <h3>Sintaxis Básica</h3>
+            <pre>CREATE TRIGGER nombre_trigger
+{BEFORE | AFTER} {INSERT | UPDATE | DELETE}
+ON nombre_tabla FOR EACH ROW
+BEGIN
+    -- Código a ejecutar
+END;</pre>
+
+            <h3>Ejemplo: Auditoría</h3>
+            <p>Guardar un registro cada vez que se actualiza un salario.</p>
+            <pre>CREATE TRIGGER log_salario_update
+AFTER UPDATE ON empleados
+FOR EACH ROW
+BEGIN
+    IF OLD.salario <> NEW.salario THEN
+        INSERT INTO auditoria_salarios (empleado_id, salario_anterior, salario_nuevo, fecha)
+        VALUES (OLD.id, OLD.salario, NEW.salario, NOW());
+    END IF;
+END;</pre>
+
+            <a href="../index.html" class="enlace-volver">Volver al Inicio</a>
+        </section>
+    </main>
+    <footer class="pie-pagina">
+        <p>&copy; Todos los derechos reservados 2025 - JeironPro</p>
+    </footer>
+</body>
+</html>

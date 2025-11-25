@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icons/sql.png" type="image/x-icon">
+    <title>Prueba Final - Curso SQL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/prueba_final.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="logo">
+            <img src="../icons/sql.png" alt="SQL Logo">
+            <span>Curso SQL</span>
+        </div>
+    </header>
+
+    <main class="principal">
+        <section class="seccion-contenido">
+            <h1 class="section-title">Prueba Final Integral</h1>
+            <p>Demuestra tu dominio de SQL respondiendo a estas preguntas que cubren desde lo básico hasta nivel experto.</p>
+            
+            <form id="formulario-prueba">
+                <!-- Nivel Básico -->
+                <div class="pregunta">
+                    <h3>1. ¿Qué sentencia se usa para insertar datos?</h3>
+                    <div class="opciones">
+                        <label><input type="radio" name="q1" value="a"> ADD DATA</label>
+                        <label><input type="radio" name="q1" value="b"> INSERT INTO</label>
+                        <label><input type="radio" name="q1" value="c"> CREATE ROW</label>
+                    </div>
+                </div>
+
+                <div class="pregunta">
+                    <h3>2. ¿Qué sentencia se usa para leer datos?</h3>
+                    <div class="opciones">
+                        <label><input type="radio" name="q2" value="a"> GET</label>
+                        <label><input type="radio" name="q2" value="b"> READ</label>
+                        <label><input type="radio" name="q2" value="c"> SELECT</label>
+                    </div>
+                </div>
+
+                <div class="pregunta">
+                    <h3>3. ¿Qué pasa si omites el WHERE en un DELETE?</h3>
+                    <div class="opciones">
+                        <label><input type="radio" name="q3" value="a"> Da un error</label>
+                        <label><input type="radio" name="q3" value="b"> Borra solo la primera fila</label>
+                        <label><input type="radio" name="q3" value="c"> Borra TODAS las filas</label>
+                    </div>
+                </div>
+
+                <!-- Nivel Intermedio -->
+                <div class="pregunta">
+                    <h3>4. ¿Qué operador se usa para rangos?</h3>
+                    <div class="opciones">
+                        <label><input type="radio" name="q4" value="a"> IN</label>
+                        <label><input type="radio" name="q4" value="b"> BETWEEN</label>
+                        <label><input type="radio" name="q4" value="c"> RANGE</label>
+                    </div>
+                </div>
+
+                <div class="pregunta">
+                    <h3>5. ¿Qué función cuenta filas?</h3>
+                    <div class="opciones">
+                        <label><input type="radio" name="q5" value="a"> SUM()</label>
+                        <label><input type="radio" name="q5" value="b"> TOTAL()</label>
+                        <label><input type="radio" name="q5" value="c"> COUNT()</label>
+                    </div>
+                </div>
+
+                <div class="pregunta">
+                    <h3>6. ¿Qué JOIN devuelve coincidencias en ambas tablas?</h3>
+                    <div class="opciones">
+                        <label><input type="radio" name="q6" value="a"> LEFT JOIN</label>
+                        <label><input type="radio" name="q6" value="b"> INNER JOIN</label>
+                        <label><input type="radio" name="q6" value="c"> FULL JOIN</label>
+                    </div>
+                </div>
+
+                <!-- Nivel Avanzado -->
+                <div class="pregunta">
+                    <h3>7. ¿Qué comando elimina una tabla?</h3>
+                    <div class="opciones">
+                        <label><input type="radio" name="q7" value="a"> DELETE TABLE</label>
+                        <label><input type="radio" name="q7" value="b"> DROP TABLE</label>
+                        <label><input type="radio" name="q7" value="c"> REMOVE TABLE</label>
+                    </div>
+                </div>
+
+                <div class="pregunta">
+                    <h3>8. ¿Qué constraint asegura que no haya duplicados?</h3>
+                    <div class="opciones">
+                        <label><input type="radio" name="q8" value="a"> PRIMARY KEY</label>
+                        <label><input type="radio" name="q8" value="b"> FOREIGN KEY</label>
+                        <label><input type="radio" name="q8" value="c"> UNIQUE</label>
+                    </div>
+                </div>
+
+                <div class="pregunta">
+                    <h3>9. ¿Qué es una Vista (View)?</h3>
+                    <div class="opciones">
+                        <label><input type="radio" name="q9" value="a"> Una tabla temporal</label>
+                        <label><input type="radio" name="q9" value="b"> Una tabla virtual basada en una consulta</label>
+                        <label><input type="radio" name="q9" value="c"> Una copia de seguridad</label>
+                    </div>
+                </div>
+
+                <div class="pregunta">
+                    <h3>10. ¿Dónde se puede usar una subconsulta?</h3>
+                    <div class="opciones">
+                        <label><input type="radio" name="q10" value="a"> Solo en SELECT</label>
+                        <label><input type="radio" name="q10" value="b"> Solo en WHERE</label>
+                        <label><input type="radio" name="q10" value="c"> En SELECT, FROM, WHERE, etc.</label>
+                    </div>
+                </div>
+
+                <!-- Nivel Experto -->
+                <div class="pregunta">
+                    <h3>11. ¿Qué significa la 'A' en ACID?</h3>
+                    <div class="opciones">
+                        <label><input type="radio" name="q11" value="a"> Automaticidad</label>
+                        <label><input type="radio" name="q11" value="b"> Atomicidad</label>
+                        <label><input type="radio" name="q11" value="c"> Autenticación</label>
+                    </div>
+                </div>
+
+                <div class="pregunta">
+                    <h3>12. ¿Cuándo se ejecuta un Trigger?</h3>
+                    <div class="opciones">
+                        <label><input type="radio" name="q12" value="a"> Cuando el usuario lo llama</label>
+                        <label><input type="radio" name="q12" value="b"> Automáticamente ante un evento (INSERT/UPDATE/DELETE)</label>
+                        <label><input type="radio" name="q12" value="c"> Solo al crear la tabla</label>
+                    </div>
+                </div>
+
+                <div class="pregunta">
+                    <h3>13. ¿Qué comando da permisos a un usuario?</h3>
+                    <div class="opciones">
+                        <label><input type="radio" name="q13" value="a"> ALLOW</label>
+                        <label><input type="radio" name="q13" value="b"> PERMIT</label>
+                        <label><input type="radio" name="q13" value="c"> GRANT</label>
+                    </div>
+                </div>
+
+                <div class="pregunta">
+                    <h3>14. ¿Qué hace un Stored Procedure?</h3>
+                    <div class="opciones">
+                        <label><input type="radio" name="q14" value="a"> Almacena datos temporalmente</label>
+                        <label><input type="radio" name="q14" value="b"> Guarda código SQL reutilizable</label>
+                        <label><input type="radio" name="q14" value="c"> Crea copias de seguridad</label>
+                    </div>
+                </div>
+
+                <div class="pregunta">
+                    <h3>15. ¿Cuál es la diferencia entre WHERE y HAVING?</h3>
+                    <div class="opciones">
+                        <label><input type="radio" name="q15" value="a"> No hay diferencia</label>
+                        <label><input type="radio" name="q15" value="b"> WHERE filtra filas, HAVING filtra grupos</label>
+                        <label><input type="radio" name="q15" value="c"> HAVING es más rápido</label>
+                    </div>
+                </div>
+
+                <div class="pregunta">
+                    <h3>16. ¿Qué hace LIMIT 10?</h3>
+                    <div class="opciones">
+                        <label><input type="radio" name="q16" value="a"> Devuelve las primeras 10 filas</label>
+                        <label><input type="radio" name="q16" value="b"> Limita el tamaño de la tabla a 10 filas</label>
+                        <label><input type="radio" name="q16" value="c"> Borra 10 filas</label>
+                    </div>
+                </div>
+
+                <div class="pregunta">
+                    <h3>17. ¿Qué operador busca patrones en texto?</h3>
+                    <div class="opciones">
+                        <label><input type="radio" name="q17" value="a"> MATCH</label>
+                        <label><input type="radio" name="q17" value="b"> LIKE</label>
+                        <label><input type="radio" name="q17" value="c"> FIND</label>
+                    </div>
+                </div>
+
+                <div class="pregunta">
+                    <h3>18. ¿Qué hace ROLLBACK en una transacción?</h3>
+                    <div class="opciones">
+                        <label><input type="radio" name="q18" value="a"> Confirma los cambios</label>
+                        <label><input type="radio" name="q18" value="b"> Deshace los cambios no confirmados</label>
+                        <label><input type="radio" name="q18" value="c"> Pausa la transacción</label>
+                    </div>
+                </div>
+
+                <div class="pregunta">
+                    <h3>19. ¿Qué función devuelve el valor máximo?</h3>
+                    <div class="opciones">
+                        <label><input type="radio" name="q19" value="a"> HIGHEST()</label>
+                        <label><input type="radio" name="q19" value="b"> TOP()</label>
+                        <label><input type="radio" name="q19" value="c"> MAX()</label>
+                    </div>
+                </div>
+
+                <div class="pregunta">
+                    <h3>20. ¿Qué constraint evita valores NULL?</h3>
+                    <div class="opciones">
+                        <label><input type="radio" name="q20" value="a"> NOT NULL</label>
+                        <label><input type="radio" name="q20" value="b"> REQUIRED</label>
+                        <label><input type="radio" name="q20" value="c"> MANDATORY</label>
+                    </div>
+                </div>
+
+                <div class="pregunta">
+                    <h3>21. ¿Qué sentencia modifica datos existentes?</h3>
+                    <div class="opciones">
+                        <label><input type="radio" name="q21" value="a"> MODIFY</label>
+                        <label><input type="radio" name="q21" value="b"> UPDATE</label>
+                        <label><input type="radio" name="q21" value="c"> CHANGE</label>
+                    </div>
+                </div>
+
+                <div class="pregunta">
+                    <h3>22. ¿Qué hace ORDER BY DESC?</h3>
+                    <div class="opciones">
+                        <label><input type="radio" name="q22" value="a"> Ordena de forma ascendente</label>
+                        <label><input type="radio" name="q22" value="b"> Ordena de forma descendente</label>
+                        <label><input type="radio" name="q22" value="c"> Elimina duplicados</label>
+                    </div>
+                </div>
+
+                <div class="pregunta">
+                    <h3>23. ¿Para qué se usa GROUP BY?</h3>
+                    <div class="opciones">
+                        <label><input type="radio" name="q23" value="a"> Para agrupar filas con valores similares</label>
+                        <label><input type="radio" name="q23" value="b"> Para ordenar resultados</label>
+                        <label><input type="radio" name="q23" value="c"> Para unir tablas</label>
+                    </div>
+                </div>
+
+                <div class="pregunta">
+                    <h3>24. ¿Qué comando modifica la estructura de una tabla?</h3>
+                    <div class="opciones">
+                        <label><input type="radio" name="q24" value="a"> MODIFY TABLE</label>
+                        <label><input type="radio" name="q24" value="b"> ALTER TABLE</label>
+                        <label><input type="radio" name="q24" value="c"> CHANGE TABLE</label>
+                    </div>
+                </div>
+
+                <div class="pregunta">
+                    <h3>25. ¿Qué devuelve LEFT JOIN?</h3>
+                    <div class="opciones">
+                        <label><input type="radio" name="q25" value="a"> Solo coincidencias</label>
+                        <label><input type="radio" name="q25" value="b"> Todos los registros de la tabla izquierda</label>
+                        <label><input type="radio" name="q25" value="c"> Todos los registros de ambas tablas</label>
+                    </div>
+                </div>
+
+                <button type="button" class="cta-button" onclick="verificarRespuestas()">Verificar Respuestas</button>
+            </form>
+            <div id="resultado"></div>
+            
+            <a href="../index.html" class="enlace-volver">Volver al Inicio</a>
+        </section>
+    </main>
+    <footer class="pie-pagina">
+        <p>&copy; Todos los derechos reservados 2025 - JeironPro</p>
+    </footer>
+
+    <script src="../js/prueba_final.js"></script>
+</body>
+</html>

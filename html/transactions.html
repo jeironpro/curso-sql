@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icons/sql.png" type="image/x-icon">
+    <title>Transacciones - Curso SQL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="logo">
+            <img src="../icons/sql.png" alt="SQL Logo">
+            <span>Curso SQL</span>
+        </div>
+    </header>
+
+    <main class="principal">
+        <section class="seccion-contenido">
+            <h1 class="section-title">Transacciones y ACID</h1>
+            
+            <h2>¿Qué es una Transacción?</h2>
+            <p>Una transacción es una unidad única de trabajo. Si una transacción tiene éxito, todos los cambios de datos realizados durante la transacción se confirman y se guardan permanentemente. Si una transacción encuentra errores y debe cancelarse o revertirse, se borran todos los cambios de datos.</p>
+            
+            <h3>Propiedades ACID</h3>
+            <ul>
+                <li><strong>A</strong>tomicity (Atomicidad): Todo o nada.</li>
+                <li><strong>C</strong>onsistency (Consistencia): La BD pasa de un estado válido a otro.</li>
+                <li><strong>I</strong>solation (Aislamiento): Las transacciones no interfieren entre sí.</li>
+                <li><strong>D</strong>urability (Durabilidad): Los cambios confirmados son permanentes.</li>
+            </ul>
+
+            <h3>Control de Transacciones</h3>
+            <pre>-- Iniciar transacción
+START TRANSACTION;
+
+-- Ejecutar operaciones
+INSERT INTO pedidos (cliente_id, fecha) VALUES (1, NOW());
+UPDATE inventario SET stock = stock - 1 WHERE producto_id = 5;
+
+-- Si todo va bien:
+COMMIT;
+
+-- Si algo falla:
+ROLLBACK;</pre>
+
+            <a href="../index.html" class="enlace-volver">Volver al Inicio</a>
+        </section>
+    </main>
+    <footer class="pie-pagina">
+        <p>&copy; Todos los derechos reservados 2025 - JeironPro</p>
+    </footer>
+</body>
+</html>

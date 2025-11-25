@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icons/sql.png" type="image/x-icon">
+    <title>Update (UPDATE) - Curso SQL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="logo">
+            <img src="../icons/sql.png" alt="SQL Logo">
+            <span>Curso SQL</span>
+        </div>
+    </header>
+
+    <main class="principal">
+        <section class="seccion-contenido">
+            <h1>Update: Actualizar Datos</h1>
+            
+            <h2>La sentencia UPDATE</h2>
+            <p>La operación <strong>Update</strong> se utiliza para modificar registros existentes en una tabla.</p>
+            
+            <h3>Sintaxis Básica</h3>
+            <pre>UPDATE nombre_tabla
+SET columna1 = valor1, columna2 = valor2, ...
+WHERE condicion;</pre>
+
+            <h3>Ejemplo</h3>
+            <p>Para actualizar el email de un usuario específico:</p>
+            <pre>UPDATE usuarios
+SET email = 'nuevo_email@example.com'
+WHERE nombre = 'Juan Perez';</pre>
+
+            <div class="advertencia">
+                <strong>¡Cuidado!</strong> Si omites la cláusula <code>WHERE</code>, se actualizarán <strong>TODOS</strong> los registros de la tabla.
+            </div>
+            <pre>-- ¡Esto cambiará el email de TODOS los usuarios!
+UPDATE usuarios
+SET email = 'error@example.com';</pre>
+
+            <h3>Buenas Prácticas</h3>
+            <ul>
+                <li>Siempre prueba tu cláusula <code>WHERE</code> con un <code>SELECT</code> antes de ejecutar el <code>UPDATE</code> para asegurarte de que estás seleccionando las filas correctas.</li>
+                <li>Haz una copia de seguridad antes de actualizaciones masivas.</li>
+            </ul>
+
+            <h3>Errores Comunes</h3>
+            <ul>
+                <li>Olvidar el <code>WHERE</code> y actualizar toda la tabla.</li>
+                <li>Actualizar la clave primaria (generalmente no se recomienda).</li>
+            </ul>
+
+            <a href="../index.html" class="enlace-volver">Volver al Inicio</a>
+        </section>
+    </main>
+    
+    <footer class="pie-pagina">
+        <p>&copy; Todos los derechos reservados 2025 - JeironPro</p>
+    </footer>
+</body>
+</html>

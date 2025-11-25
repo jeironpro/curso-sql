@@ -4,38 +4,152 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="icons/sql.png" type="image/x-icon">
-    <title>Curso Operaciones SQL - PyJa</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <title>Curso SQL - Curso Completo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Curso Operaciones SQL - PyJa</h1>
+    <header class="encabezado">
+        <div class="logo">
+            <img src="icons/sql.png" alt="SQL Logo">
+            <span>Curso SQL</span>
+        </div>
     </header>
-    <main>
-        <section class="contenedor-crud">
-            <a href="" class="crud introduccion">Introducción</a>
-            <a href="" class="crud create">
-                <img src="icons/create.png" alt="Letra C que representa create" class="icon-crud">
-                <span class="operacion">Create</span>
-            </a>
-            <a href="" class="crud read">
-                <img src="icons/read.png" alt="Letra R que representa read" class="icon-crud">
-                <span class="operacion">Read</span>
-            </a>
-            <a href="" class="crud update">
-                <img src="icons/update.png" alt="Letra U que representa update" class="icon-crud">
-                <span class="operacion">Update</span>
-            </a>
-            <a href="" class="crud delete">
-                <img src="icons/delete.png" alt="Letra D que representa delete" class="icon-crud">
-                <span class="operacion">Delete</span>
-            </a>
-            <a href="" class="crud prueba-final">Prueba final</a>
+
+    <section class="hero">
+        <div class="contenido-hero">
+            <h1>Domina SQL desde Cero</h1>
+            <p>Aprende SQL de forma práctica y estructurada, desde operaciones básicas hasta técnicas avanzadas de bases de datos.</p>
+            <a href="#nivel-basico" class="boton-cta">Comenzar Ahora</a>
+        </div>
+    </section>
+
+    <main class="principal">
+        <!-- Nivel Básico -->
+        <section class="seccion-nivel" id="nivel-basico">
+            <h2 class="titulo-seccion">📚 Nivel Básico</h2>
+            <div class="contenedor-cuadricula">
+                <a href="html/introduccion.html" class="tarjeta">
+                    <div class="icono-tarjeta">📖</div>
+                    <h3>Introducción</h3>
+                    <p>Conceptos fundamentales de SQL y bases de datos</p>
+                </a>
+                <a href="html/create.html" class="tarjeta">
+                    <div class="icono-tarjeta">➕</div>
+                    <h3>Create (INSERT)</h3>
+                    <p>Aprende a insertar datos en tus tablas</p>
+                </a>
+                <a href="html/read.html" class="tarjeta">
+                    <div class="icono-tarjeta">🔍</div>
+                    <h3>Read (SELECT)</h3>
+                    <p>Consulta y recupera información de la base de datos</p>
+                </a>
+                <a href="html/update.html" class="tarjeta">
+                    <div class="icono-tarjeta">✏️</div>
+                    <h3>Update (UPDATE)</h3>
+                    <p>Modifica datos existentes en tus tablas</p>
+                </a>
+                <a href="html/delete.html" class="tarjeta">
+                    <div class="icono-tarjeta">🗑️</div>
+                    <h3>Delete (DELETE)</h3>
+                    <p>Elimina registros de manera segura</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Nivel Intermedio -->
+        <section class="seccion-nivel">
+            <h2 class="titulo-seccion">📊 Nivel Intermedio</h2>
+            <div class="contenedor-cuadricula">
+                <a href="html/where_operators.html" class="tarjeta">
+                    <div class="icono-tarjeta">🎯</div>
+                    <h3>WHERE & Operadores</h3>
+                    <p>Filtra datos con condiciones avanzadas</p>
+                </a>
+                <a href="html/order_limit.html" class="tarjeta">
+                    <div class="icono-tarjeta">📈</div>
+                    <h3>ORDER BY & LIMIT</h3>
+                    <p>Ordena y limita resultados</p>
+                </a>
+                <a href="html/aggregates.html" class="tarjeta">
+                    <div class="icono-tarjeta">🧮</div>
+                    <h3>Agregados & GROUP BY</h3>
+                    <p>Funciones de agregación y agrupación</p>
+                </a>
+                <a href="html/joins.html" class="tarjeta">
+                    <div class="icono-tarjeta">🔗</div>
+                    <h3>JOINS</h3>
+                    <p>Combina datos de múltiples tablas</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Nivel Avanzado -->
+        <section class="seccion-nivel">
+            <h2 class="titulo-seccion">🎓 Nivel Avanzado</h2>
+            <div class="contenedor-cuadricula">
+                <a href="html/ddl.html" class="tarjeta">
+                    <div class="icono-tarjeta">🏗️</div>
+                    <h3>DDL (Tablas)</h3>
+                    <p>Crea y modifica estructuras de tablas</p>
+                </a>
+                <a href="html/constraints.html" class="tarjeta">
+                    <div class="icono-tarjeta">🔒</div>
+                    <h3>Constraints</h3>
+                    <p>Restricciones e integridad de datos</p>
+                </a>
+                <a href="html/subqueries.html" class="tarjeta">
+                    <div class="icono-tarjeta">🔄</div>
+                    <h3>Subqueries</h3>
+                    <p>Consultas anidadas y subconsultas</p>
+                </a>
+                <a href="html/views_indexes.html" class="tarjeta">
+                    <div class="icono-tarjeta">👁️</div>
+                    <h3>Views & Indexes</h3>
+                    <p>Vistas e índices para optimización</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Nivel Experto -->
+        <section class="seccion-nivel">
+            <h2 class="titulo-seccion">🚀 Nivel Experto</h2>
+            <div class="contenedor-cuadricula">
+                <a href="html/transactions.html" class="tarjeta">
+                    <div class="icono-tarjeta">💼</div>
+                    <h3>Transacciones</h3>
+                    <p>ACID, COMMIT y ROLLBACK</p>
+                </a>
+                <a href="html/procedures.html" class="tarjeta">
+                    <div class="icono-tarjeta">⚙️</div>
+                    <h3>Procedimientos</h3>
+                    <p>Stored Procedures y funciones</p>
+                </a>
+                <a href="html/triggers.html" class="tarjeta">
+                    <div class="icono-tarjeta">⚡</div>
+                    <h3>Triggers</h3>
+                    <p>Disparadores automáticos</p>
+                </a>
+                <a href="html/security.html" class="tarjeta">
+                    <div class="icono-tarjeta">🔐</div>
+                    <h3>Seguridad</h3>
+                    <p>Usuarios, permisos y GRANT/REVOKE</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Prueba Final -->
+        <section class="seccion-final">
+            <div class="tarjeta-cta">
+                <h2>¿Listo para el Desafío?</h2>
+                <p>Pon a prueba tus conocimientos con nuestra evaluación integral de 25 preguntas que cubren todos los niveles.</p>
+                <a href="html/prueba_final.html" class="boton-cta secundario">Iniciar Prueba Final</a>
+            </div>
         </section>
     </main>
-    <footer>
-        &copy; Todos los derechos reservados 2025 - JeironPro
+
+    <footer class="pie-pagina">
+        <p>&copy; Todos los derechos reservados 2025 - JeironPro</p>
     </footer>
 </body>
 </html>

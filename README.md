@@ -1,8 +1,7 @@
 # curso-sql
 
 ## 📌 Descripción
-Este proyecto forma parte de mi portafolio personal.  
-El objetivo es demostrar buenas prácticas de programación, organización y documentación en GitHub.
+Este proyecto fue creado inicialmente con una estructura hecha por mí y se implementó en el nuevo editor de Google, Antigravity, utilizando los cinco modelos de IA disponibles
 
 ## 📜 Licencia
 Este proyecto está bajo la licencia **MIT**.  

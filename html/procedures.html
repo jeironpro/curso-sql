@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icons/sql.png" type="image/x-icon">
+    <title>Procedimientos - Curso SQL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="logo">
+            <img src="../icons/sql.png" alt="SQL Logo">
+            <span>Curso SQL</span>
+        </div>
+    </header>
+
+    <main class="principal">
+        <section class="seccion-contenido">
+            <h1 class="section-title">Procedimientos Almacenados</h1>
+            
+            <h2>¿Qué es un Stored Procedure?</h2>
+            <p>Un procedimiento almacenado es un código SQL preparado que puedes guardar, de modo que el código se pueda reutilizar una y otra vez.</p>
+            
+            <h3>Crear un Procedimiento</h3>
+            <pre>DELIMITER //
+
+CREATE PROCEDURE ObtenerClientesPorPais(IN nombrePais VARCHAR(255))
+BEGIN
+    SELECT * FROM clientes WHERE pais = nombrePais;
+END //
+
+DELIMITER ;</pre>
+
+            <h3>Llamar a un Procedimiento</h3>
+            <pre>CALL ObtenerClientesPorPais('España');</pre>
+
+            <h2>Funciones Definidas por el Usuario (UDF)</h2>
+            <p>Similares a los procedimientos, pero devuelven un valor y se pueden usar en sentencias SQL.</p>
+
+            <pre>CREATE FUNCTION CalcularImpuesto(precio DECIMAL(10,2))
+RETURNS DECIMAL(10,2)
+BEGIN
+    RETURN precio * 0.21;
+END;</pre>
+
+            <pre>SELECT nombre, precio, CalcularImpuesto(precio) as iva
+FROM productos;</pre>
+
+            <a href="../index.html" class="enlace-volver">Volver al Inicio</a>
+        </section>
+    </main>
+    <footer class="pie-pagina">
+        <p>&copy; Todos los derechos reservados 2025 - JeironPro</p>
+    </footer>
+</body>
+</html>

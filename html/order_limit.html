@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icons/sql.png" type="image/x-icon">
+    <title>ORDER BY & LIMIT - Curso SQL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="logo">
+            <img src="../icons/sql.png" alt="SQL Logo">
+            <span>Curso SQL</span>
+        </div>
+    </header>
+
+    <main class="principal">
+        <section class="seccion-contenido">
+            <h1>Ordenamiento y Límites</h1>
+            
+            <h2>ORDER BY</h2>
+            <p>La cláusula <code>ORDER BY</code> se utiliza para ordenar el conjunto de resultados en orden ascendente o descendente.</p>
+            
+            <ul>
+                <li><code>ASC</code>: Ascendente (por defecto).</li>
+                <li><code>DESC</code>: Descendente.</li>
+            </ul>
+
+            <h3>Ejemplo</h3>
+            <pre>-- Ordenar usuarios por nombre alfabéticamente
+SELECT * FROM usuarios
+ORDER BY nombre ASC;</pre>
+
+            <pre>-- Ordenar productos por precio, del más caro al más barato
+SELECT * FROM productos
+ORDER BY precio DESC;</pre>
+
+            <h2>LIMIT</h2>
+            <p>La cláusula <code>LIMIT</code> se utiliza para especificar el número de registros a devolver. Es muy útil para paginación o para obtener los "top X" resultados.</p>
+
+            <h3>Ejemplo</h3>
+            <pre>-- Obtener los 5 productos más caros
+SELECT * FROM productos
+ORDER BY precio DESC
+LIMIT 5;</pre>
+
+            <a href="../index.html" class="enlace-volver">Volver al Inicio</a>
+        </section>
+    </main>
+    
+    <footer class="pie-pagina">
+        <p>&copy; Todos los derechos reservados 2025 - JeironPro</p>
+    </footer>
+</body>
+</html>

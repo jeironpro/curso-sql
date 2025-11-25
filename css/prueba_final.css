@@ -1,0 +1,36 @@
+.pregunta {
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+
+.pregunta h3 {
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.opciones label {
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    transition: background-color 0.2s;
+}
+
+.opciones label:hover {
+    background-color: #f3f4f6;
+}
+
+.opciones input {
+    margin-right: 10px;
+}
+
+#resultado {
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+}

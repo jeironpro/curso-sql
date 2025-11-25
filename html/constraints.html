@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icons/sql.png" type="image/x-icon">
+    <title>Constraints - Curso SQL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="logo">
+            <img src="../icons/sql.png" alt="SQL Logo">
+            <span>Curso SQL</span>
+        </div>
+    </header>
+
+    <main class="principal">
+        <section class="seccion-contenido">
+            <h1>Constraints (Restricciones)</h1>
+            
+            <h2>¿Qué son las Constraints?</h2>
+            <p>Las restricciones son reglas que se aplican a las columnas de una tabla para garantizar la integridad y precisión de los datos.</p>
+            
+            <h3>PRIMARY KEY (Clave Primaria)</h3>
+            <p>Identifica de forma única cada fila en una tabla. No puede ser NULL.</p>
+            <pre>CREATE TABLE productos (
+    id INT PRIMARY KEY,
+    nombre VARCHAR(50)
+);</pre>
+
+            <h3>FOREIGN KEY (Clave Foránea)</h3>
+            <p>Enlaza dos tablas. Asegura que el valor en una columna coincida con un valor en otra tabla.</p>
+            <pre>CREATE TABLE pedidos (
+    id INT PRIMARY KEY,
+    producto_id INT,
+    FOREIGN KEY (producto_id) REFERENCES productos(id)
+);</pre>
+
+            <h3>NOT NULL</h3>
+            <p>Asegura que una columna no pueda tener un valor NULL.</p>
+            <pre>nombre VARCHAR(50) NOT NULL</pre>
+
+            <h3>UNIQUE</h3>
+            <p>Asegura que todos los valores en una columna sean diferentes.</p>
+            <pre>email VARCHAR(100) UNIQUE</pre>
+
+            <h3>CHECK</h3>
+            <p>Asegura que el valor en una columna cumpla una condición específica.</p>
+            <pre>edad INT CHECK (edad >= 18)</pre>
+
+            <a href="../index.html" class="enlace-volver">Volver al Inicio</a>
+        </section>
+    </main>
+    
+    <footer class="pie-pagina">
+        <p>&copy; Todos los derechos reservados 2025 - JeironPro</p>
+    </footer>
+</body>
+</html>

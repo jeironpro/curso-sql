@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icons/sql.png" type="image/x-icon">
+    <title>Subqueries - Curso SQL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="logo">
+            <img src="../icons/sql.png" alt="SQL Logo">
+            <span>Curso SQL</span>
+        </div>
+    </header>
+
+    <main class="principal">
+        <section class="seccion-contenido">
+            <h1>Subqueries (Subconsultas)</h1>
+            
+            <h2>¿Qué es una Subquery?</h2>
+            <p>Una subconsulta es una consulta anidada dentro de otra consulta SQL. Se puede usar en cláusulas SELECT, FROM, WHERE, etc.</p>
+            
+            <h3>Subconsulta en WHERE</h3>
+            <p>Usada para filtrar resultados basados en el resultado de otra consulta.</p>
+            <pre>-- Usuarios que han hecho pedidos
+SELECT * FROM usuarios
+WHERE id IN (SELECT cliente_id FROM pedidos);</pre>
+
+            <h3>Subconsulta en SELECT</h3>
+            <p>Usada para calcular un valor para cada fila.</p>
+            <pre>-- Usuarios y su número de pedidos
+SELECT nombre, 
+    (SELECT COUNT(*) FROM pedidos WHERE pedidos.cliente_id = usuarios.id) as total_pedidos
+FROM usuarios;</pre>
+
+            <h3>Subconsulta en FROM</h3>
+            <p>Usada como una tabla temporal.</p>
+            <pre>-- Promedio de pedidos por usuario
+SELECT AVG(total_pedidos)
+FROM (
+    SELECT cliente_id, COUNT(*) as total_pedidos
+    FROM pedidos
+    GROUP BY cliente_id
+) as pedidos_por_usuario;</pre>
+
+            <a href="../index.html" class="enlace-volver">Volver al Inicio</a>
+        </section>
+    </main>
+    
+    <footer class="pie-pagina">
+        <p>&copy; Todos los derechos reservados 2025 - JeironPro</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icons/sql.png" type="image/x-icon">
+    <title>Seguridad - Curso SQL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="logo">
+            <img src="../icons/sql.png" alt="SQL Logo">
+            <span>Curso SQL</span>
+        </div>
+    </header>
+
+    <main class="principal">
+        <section class="seccion-contenido">
+            <h1 class="section-title">Seguridad y Permisos</h1>
+            
+            <h2>Gestión de Usuarios</h2>
+            <p>Es fundamental controlar quién tiene acceso a la base de datos y qué puede hacer.</p>
+            
+            <h3>Crear Usuario</h3>
+            <pre>CREATE USER 'nuevo_usuario'@'localhost' IDENTIFIED BY 'contraseña_segura';</pre>
+
+            <h2>Permisos (GRANT y REVOKE)</h2>
+            
+            <h3>Dar Permisos (GRANT)</h3>
+            <pre>-- Dar permiso de lectura en todas las tablas
+GRANT SELECT ON mi_base_datos.* TO 'nuevo_usuario'@'localhost';
+
+-- Dar todos los permisos
+GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost';</pre>
+
+            <h3>Quitar Permisos (REVOKE)</h3>
+            <pre>REVOKE INSERT, UPDATE ON mi_base_datos.* FROM 'nuevo_usuario'@'localhost';</pre>
+
+            <h3>Aplicar Cambios</h3>
+            <pre>FLUSH PRIVILEGES;</pre>
+
+            <a href="../index.html" class="enlace-volver">Volver al Inicio</a>
+        </section>
+    </main>
+    <footer class="pie-pagina">
+        <p>&copy; Todos los derechos reservados 2025 - JeironPro</p>
+    </footer>
+</body>
+</html>

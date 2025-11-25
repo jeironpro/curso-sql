@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icons/sql.png" type="image/x-icon">
+    <title>WHERE & Operators - Curso SQL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="logo">
+            <img src="../icons/sql.png" alt="SQL Logo">
+            <span>Curso SQL</span>
+        </div>
+    </header>
+
+    <main class="principal">
+        <section class="seccion-contenido">
+            <h1>WHERE & Operadores</h1>
+            
+            <h2>Filtrado Avanzado con WHERE</h2>
+            <p>La cláusula <code>WHERE</code> se vuelve mucho más poderosa cuando la combinamos con operadores lógicos y de comparación.</p>
+            
+            <h3>Operadores Lógicos</h3>
+            <table>
+                <tr>
+                    <th>Operador</th>
+                    <th>Descripción</th>
+                </tr>
+                <tr>
+                    <td>AND</td>
+                    <td>Ambas condiciones deben ser verdaderas.</td>
+                </tr>
+                <tr>
+                    <td>OR</td>
+                    <td>Al menos una condición debe ser verdadera.</td>
+                </tr>
+                <tr>
+                    <td>NOT</td>
+                    <td>Invierte el valor de la condición.</td>
+                </tr>
+            </table>
+
+            <h3>Ejemplos</h3>
+            <pre>-- Usuarios activos Y mayores de 18
+SELECT * FROM usuarios
+WHERE activo = 1 AND edad > 18;</pre>
+
+            <pre>-- Usuarios de España O México
+SELECT * FROM usuarios
+WHERE pais = 'España' OR pais = 'México';</pre>
+
+            <h3>Operadores Especiales</h3>
+            <ul>
+                <li><code>IN</code>: Permite especificar múltiples valores.</li>
+                <li><code>BETWEEN</code>: Selecciona valores dentro de un rango.</li>
+                <li><code>LIKE</code>: Busca un patrón específico.</li>
+            </ul>
+
+            <pre>-- Usuarios cuyo nombre empieza por 'J'
+SELECT * FROM usuarios
+WHERE nombre LIKE 'J%';</pre>
+
+            <a href="../index.html" class="enlace-volver">Volver al Inicio</a>
+        </section>
+    </main>
+    
+    <footer class="pie-pagina">
+        <p>&copy; Todos los derechos reservados 2025 - JeironPro</p>
+    </footer>
+</body>
+</html>

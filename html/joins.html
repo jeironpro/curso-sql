@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icons/sql.png" type="image/x-icon">
+    <title>JOINS - Curso SQL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        .join-type {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+            border-left: 4px solid var(--secondary-color);
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header class="encabezado">
+        <div class="logo">
+            <img src="../icons/sql.png" alt="SQL Logo">
+            <span>Curso SQL</span>
+        </div>
+    </header>
+
+    <main class="principal">
+        <section class="seccion-contenido">
+            <h1>JOINS: Unir Tablas</h1>
+            
+            <h2>¿Qué es un JOIN?</h2>
+            <p>Una cláusula <code>JOIN</code> se utiliza para combinar filas de dos o más tablas, basándose en una columna relacionada entre ellas.</p>
+            
+            <div class="join-type">
+                <h3>INNER JOIN</h3>
+                <p>Devuelve registros que tienen valores coincidentes en ambas tablas.</p>
+                <pre>SELECT pedidos.id, clientes.nombre
+FROM pedidos
+INNER JOIN clientes ON pedidos.cliente_id = clientes.id;</pre>
+            </div>
+
+            <div class="join-type">
+                <h3>LEFT JOIN</h3>
+                <p>Devuelve todos los registros de la tabla izquierda (tabla 1), y los registros coincidentes de la tabla derecha (tabla 2).</p>
+                <pre>SELECT clientes.nombre, pedidos.id
+FROM clientes
+LEFT JOIN pedidos ON clientes.id = pedidos.cliente_id;</pre>
+            </div>
+
+            <div class="join-type">
+                <h3>RIGHT JOIN</h3>
+                <p>Devuelve todos los registros de la tabla derecha, y los registros coincidentes de la tabla izquierda.</p>
+                <pre>SELECT pedidos.id, empleados.nombre
+FROM pedidos
+RIGHT JOIN empleados ON pedidos.empleado_id = empleados.id;</pre>
+            </div>
+
+            <a href="../index.html" class="enlace-volver">Volver al Inicio</a>
+        </section>
+    </main>
+    
+    <footer class="pie-pagina">
+        <p>&copy; Todos los derechos reservados 2025 - JeironPro</p>
+    </footer>
+</body>
+</html>

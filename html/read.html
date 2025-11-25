@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icons/sql.png" type="image/x-icon">
+    <title>Read (SELECT) - Curso SQL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="logo">
+            <img src="../icons/sql.png" alt="SQL Logo">
+            <span>Curso SQL</span>
+        </div>
+    </header>
+
+    <main class="principal">
+        <section class="seccion-contenido">
+            <h1>Read: Consultar Datos</h1>
+            
+            <h2>La sentencia SELECT</h2>
+            <p>La operación <strong>Read</strong> en SQL se realiza mediante la sentencia <code>SELECT</code>. Esta es probablemente la sentencia más utilizada en SQL.</p>
+            
+            <h3>Sintaxis Básica</h3>
+            <pre>SELECT columna1, columna2, ...
+FROM nombre_tabla;</pre>
+
+            <h3>Ejemplos</h3>
+            <p>Para seleccionar todas las columnas de la tabla <code>usuarios</code>:</p>
+            <pre>SELECT * FROM usuarios;</pre>
+            
+            <p>Para seleccionar solo el nombre y el email:</p>
+            <pre>SELECT nombre, email FROM usuarios;</pre>
+
+            <h3>Filtrar Datos (WHERE)</h3>
+            <p>Podemos filtrar los resultados usando la cláusula <code>WHERE</code>:</p>
+            <pre>SELECT * FROM usuarios
+WHERE nombre = 'Juan Perez';</pre>
+
+            <h3>Buenas Prácticas</h3>
+            <ul>
+                <li>Evita usar <code>SELECT *</code> en producción. Selecciona solo las columnas que necesitas para mejorar el rendimiento y reducir el tráfico de red.</li>
+                <li>Usa alias (<code>AS</code>) para hacer los nombres de columnas más legibles, especialmente en reportes.</li>
+            </ul>
+
+            <h3>Errores Comunes</h3>
+            <ul>
+                <li>Olvidar la cláusula <code>WHERE</code> y traer millones de registros innecesariamente.</li>
+                <li>Confundir el orden de las cláusulas (ej. poner <code>ORDER BY</code> antes de <code>WHERE</code>).</li>
+            </ul>
+
+            <a href="../index.html" class="enlace-volver">Volver al Inicio</a>
+        </section>
+    </main>
+    
+    <footer class="pie-pagina">
+        <p>&copy; Todos los derechos reservados 2025 - JeironPro</p>
+    </footer>
+</body>
+</html>

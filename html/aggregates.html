@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icons/sql.png" type="image/x-icon">
+    <title>Aggregates & GROUP BY - Curso SQL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="logo">
+            <img src="../icons/sql.png" alt="SQL Logo">
+            <span>Curso SQL</span>
+        </div>
+    </header>
+
+    <main class="principal">
+        <section class="seccion-contenido">
+            <h1>Funciones de Agregación</h1>
+            
+            <h2>Funciones Comunes</h2>
+            <p>SQL proporciona funciones para realizar cálculos sobre un conjunto de valores y devolver un único valor.</p>
+            
+            <table>
+                <tr>
+                    <th>Función</th>
+                    <th>Descripción</th>
+                </tr>
+                <tr>
+                    <td>COUNT()</td>
+                    <td>Cuenta el número de filas.</td>
+                </tr>
+                <tr>
+                    <td>SUM()</td>
+                    <td>Suma los valores de una columna numérica.</td>
+                </tr>
+                <tr>
+                    <td>AVG()</td>
+                    <td>Calcula el promedio de una columna numérica.</td>
+                </tr>
+                <tr>
+                    <td>MAX()</td>
+                    <td>Devuelve el valor máximo.</td>
+                </tr>
+                <tr>
+                    <td>MIN()</td>
+                    <td>Devuelve el valor mínimo.</td>
+                </tr>
+            </table>
+
+            <h3>Ejemplos</h3>
+            <pre>-- Contar total de usuarios
+SELECT COUNT(*) FROM usuarios;</pre>
+
+            <pre>-- Precio promedio de productos
+SELECT AVG(precio) FROM productos;</pre>
+
+            <h2>GROUP BY</h2>
+            <p>La sentencia <code>GROUP BY</code> agrupa filas que tienen los mismos valores en filas de resumen.</p>
+
+            <h3>Ejemplo</h3>
+            <pre>-- Contar usuarios por país
+SELECT pais, COUNT(*) as total_usuarios
+FROM usuarios
+GROUP BY pais;</pre>
+
+            <h2>HAVING</h2>
+            <p>La cláusula <code>HAVING</code> se usa para filtrar grupos (ya que <code>WHERE</code> no funciona con funciones de agregación).</p>
+
+            <pre>-- Países con más de 100 usuarios
+SELECT pais, COUNT(*) as total_usuarios
+FROM usuarios
+GROUP BY pais
+HAVING COUNT(*) > 100;</pre>
+
+            <a href="../index.html" class="enlace-volver">Volver al Inicio</a>
+        </section>
+    </main>
+    
+    <footer class="pie-pagina">
+        <p>&copy; Todos los derechos reservados 2025 - JeironPro</p>
+    </footer>
+</body>
+</html>

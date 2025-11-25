@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icons/sql.png" type="image/x-icon">
+    <title>DDL (Tablas) - Curso SQL</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="logo">
+            <img src="../icons/sql.png" alt="SQL Logo">
+            <span>Curso SQL</span>
+        </div>
+    </header>
+
+    <main class="principal">
+        <section class="seccion-contenido">
+            <h1>DDL: Definición de Datos</h1>
+            
+            <h2>Data Definition Language (DDL)</h2>
+            <p>El DDL se encarga de definir la estructura de la base de datos (tablas, esquemas, etc.).</p>
+            
+            <h3>CREATE TABLE</h3>
+            <p>Crea una nueva tabla.</p>
+            <pre>CREATE TABLE usuarios (
+    id INT PRIMARY KEY,
+    nombre VARCHAR(100),
+    email VARCHAR(100),
+    fecha_registro DATE
+);</pre>
+
+            <h3>ALTER TABLE</h3>
+            <p>Modifica una tabla existente (añadir columnas, cambiar tipos, etc.).</p>
+            <pre>-- Añadir una columna
+ALTER TABLE usuarios
+ADD telefono VARCHAR(20);</pre>
+
+            <h3>DROP TABLE</h3>
+            <p>Elimina una tabla y todos sus datos.</p>
+            <div class="advertencia">
+                <strong>¡Peligro!</strong> Esta acción no se puede deshacer.
+            </div>
+            <pre>DROP TABLE usuarios;</pre>
+
+            <h3>Tipos de Datos Comunes</h3>
+            <ul>
+                <li><code>INT</code>: Números enteros.</li>
+                <li><code>VARCHAR(n)</code>: Texto de longitud variable (hasta n caracteres).</li>
+                <li><code>DATE</code>: Fecha (YYYY-MM-DD).</li>
+                <li><code>DECIMAL(p,s)</code>: Números decimales exactos.</li>
+            </ul>
+
+            <a href="../index.html" class="enlace-volver">Volver al Inicio</a>
+        </section>
+    </main>
+    
+    <footer class="pie-pagina">
+        <p>&copy; Todos los derechos reservados 2025 - JeironPro</p>
+    </footer>
+</body>
+</html>
