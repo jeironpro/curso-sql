@@ -1,4 +1,4 @@
-# curso-sql
+# web-curso-sql
 
 ## 📌 Descripción
 Este proyecto fue creado inicialmente con una estructura hecha por mí y se implementó en el nuevo editor de Google, Antigravity, utilizando los cinco modelos de IA disponibles
